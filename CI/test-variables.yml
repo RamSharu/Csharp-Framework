@@ -1,0 +1,45 @@
+parameters:
+  - name: jobNameParam
+    type: string
+  - name: envConfigParam
+    type: string
+  - name: apiEndPoint
+    type: string
+  - name: SeleniumGrid
+    type: string
+  - name: DeviceName
+    type: string
+  - name: BSOSVersion
+    type: string
+  - name: dependsOn
+    type: string
+    
+variables:
+
+- name: Environment
+  value: ${{ parameters.envConfigParam}}
+- name: ApiEndPoint
+  value: ${{ parameters.apiEndPoint}}
+- name: Target
+  value: 'Chrome'
+- name: SeleniumGrid
+  value: ${{ parameters.SeleniumGrid}}
+- name: Headless
+  value: true
+- name: Where
+  ${{ if eq(parameters.jobNameParam, 'EnvironmentCheck') }}:
+    value: 'TestCategory=EnvCheck'
+  ${{ if eq(parameters.jobNameParam, 'Regression') }}:
+    value: 'TestCategory=Regression'
+  ${{ if eq(parameters.jobNameParam, 'Pre') }}:
+    value: 'TestCategory=Pre'
+- name: runTrigger
+  value: 'testpipeline'    
+- name: DeviceName
+  value: 'Windows'
+- name: BSOSVersion
+  value: '11'
+- name: Build
+  value: 'CI_Pipeline_Etrade_UI_Tests'
+  
+  

@@ -1,0 +1,36 @@
+{
+  "AppSettings": {
+
+    "TestConfiguration": {
+
+      "Environment": "https://#{{ Environment }}-uk.trade.azure.defra.cloud/",
+      "Headless": true,
+      "GlobalWaitsInSeconds": 30,
+      "DeviceName": "#{{ DeviceName }}",
+      "BSOSVersion": "#{{ BSOSVersion }}",
+      "Project": "Etrade_UI_Tests",
+      "Build": "Nesa_Etrade_UI_Tests",
+      "Platform": "Desktop",
+      "IsEmulationEnabled": false,
+      "EmulateDeviceInfo": "iPad Air"
+    },
+
+    "UiFrameworkConfiguration": {
+
+      "SeleniumGrid": "#{{ SeleniumGrid }}",
+      "Target": "#{{ Target }}",
+      "IsDebug": false
+    },
+    "BrowserStackConfiguration": {
+      "CloudDeviceTarget": true,
+      "CloudCountryCode": "",
+      "CloudDeviceUserName": "nesa_Mz3Bsv",
+      "CloudDeviceUserKey": "zWNskRdAsuJtz2yi57oW",
+      "CloudDeviceIdentifier": "Test123_Nesa"
+    },
+    "BackendSetupConfig": {
+      "ApiEndpoint": "https://#{{ Environment }}trswebaw1030.azurewebsites.net/"
+
+    }
+  }
+}

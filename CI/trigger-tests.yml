@@ -1,0 +1,100 @@
+trigger: none
+
+parameters:
+  - name: branchName
+    type: string
+    default: 'refs/heads/dev'
+  - name: Environment
+    type: string
+    default: 'dev'
+  - name: ApiEndpoint
+    type: string
+    default: 'dev'
+  - name: Workers
+    type: string
+  - name: SeleniumGrid
+    type: string
+    default: ''
+  - name: DeviceName
+    type: string
+    default: 'Windows'
+  - name: BSOSVersion
+    type: string
+    default: '11'
+  
+schedules:
+- cron: "0 9-21/18 * * Mon,Tue,Wed,Thu,Fri"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - dev
+    exclude:
+    - feature/*
+    - task/*
+    - master
+    
+
+resources:
+  repositories:
+    - repository: clientautomationreponew
+      type: git
+      name: DEFRA-EEHC/Defra.Trade.EEHC.Automation
+      ref: $(Build.SourceBranch)
+
+stages:
+  
+  - stage: EnvironmentCheck
+    displayName: EnvironmentCheck
+    jobs:
+    - template: run-test-template.yml
+      parameters:
+        jobName: Ci_Local_EnvironmentCheck
+        envConfigParam: ${{ parameters.Environment}}
+        apiEndPoint: ${{ parameters.ApiEndpoint}}
+        branchName: ${{ parameters.branchName}}
+        SeleniumGrid: ${{parameters.SeleniumGrid}}  
+        DeviceName: ${{parameters.DeviceName}}
+        BSOSVersion: ${{parameters.BSOSVersion}}
+        Workers:  ${{parameters.Workers}}
+        dependsOn: ''
+
+  - stage: Regression
+    displayName: Regression
+    jobs:
+    - template: run-test-template.yml
+      parameters:
+        jobName: Ci_Local_Common
+        envConfigParam: ${{ parameters.Environment}}
+        apiEndPoint: ${{ parameters.ApiEndpoint}}
+        branchName: ${{ parameters.branchName}}
+        SeleniumGrid: ${{parameters.SeleniumGrid}}  
+        DeviceName: ${{parameters.DeviceName}}
+        BSOSVersion: ${{parameters.BSOSVersion}}
+        Workers:  ${{parameters.Workers}}
+        dependsOn: ''
+    - template: run-test-template.yml
+      parameters:
+        jobName: Ci_Local_Exporter
+        envConfigParam: ${{ parameters.Environment}}
+        apiEndPoint: ${{ parameters.ApiEndpoint}}
+        branchName: ${{ parameters.branchName}}
+        SeleniumGrid: ${{parameters.SeleniumGrid}}  
+        DeviceName: ${{parameters.DeviceName}}
+        BSOSVersion: ${{parameters.BSOSVersion}}
+        Workers:  ${{parameters.Workers}}
+        dependsOn: ''
+    - template: run-test-template.yml
+      parameters:
+        jobName: Ci_Local_Certifier
+        envConfigParam: ${{ parameters.Environment}}
+        apiEndPoint: ${{ parameters.ApiEndpoint}}
+        branchName: ${{ parameters.branchName}}
+        SeleniumGrid: ${{parameters.SeleniumGrid}}  
+        DeviceName: ${{parameters.DeviceName}}
+        BSOSVersion: ${{parameters.BSOSVersion}}
+        Workers:  ${{parameters.Workers}}
+        dependsOn: ''
+
+
+        
+

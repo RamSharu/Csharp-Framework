@@ -1,0 +1,42 @@
+parameters:
+  - name: jobNameParam
+    type: string
+  - name: env
+    type: string
+    
+
+variables:
+
+- name: Target
+  value: 'Chrome'
+- name: SeleniumGrid
+  value: 'https://hub.browserstack.com/wd/hub/'
+- name: DeviceName
+  value: 'Windows'
+- name: BSOSVersion
+  value: '11'
+- name: runTrigger
+  value: 'devpipeline'
+- name: Environment
+  value:  ${{ parameters.env }}
+- name: Build
+  ${{ if eq(parameters.jobNameParam, 'Exporter') }}:
+    value: ADO_Exporter_Tests_$(Build.BuildNumber)
+  ${{ if eq(parameters.jobNameParam, 'Common') }}:
+    value: ADO_Common_Tests_$(Build.BuildNumber)
+  ${{ if eq(parameters.jobNameParam, 'Certifier') }}:
+    value: ADO_Certifier_Tests_$(Build.BuildNumber)
+- name: Where
+  ${{ if eq(parameters.jobNameParam, 'EnvironmentCheck') }}:
+    value: 'TestCategory=EnvCheck'
+  ${{ if eq(parameters.jobNameParam, 'Regression') }}:
+    value: 'TestCategory=Regression'
+  ${{ if eq(parameters.jobNameParam, 'Pre') }}:
+    value: 'TestCategory=Pre'
+  ${{ if eq(parameters.jobNameParam, 'Exporter') }}:
+    value: 'TestCategory=Exporter'
+  ${{ if eq(parameters.jobNameParam, 'Certifier') }}:
+    value: 'TestCategory=Certifier'
+  ${{ if eq(parameters.jobNameParam, 'Common') }}:
+    value: 'TestCategory=Common'
+  
