@@ -1,0 +1,51 @@
+{
+  "EHC": [
+    {
+      "Identification": {
+        "PrdDesc": "Product 1",
+        "PkgCount": "1",
+        "PkgUnit": "PK",
+        "Weight": "1",
+        "WeightUnit": "KGM",
+        "Species": "Ovibos",
+        "FillManufacturingPlant": true,
+        "ManufacturingPlant": {
+          "Country": "United Kingdom",
+          "ApprovalNumber": false,
+          "ApprovalNumberInput": "GBVAT4556",
+          "OperatorName": true,
+          "OperatorNameInput": "Defra",
+          "ActivityInput": "Slaughterhouse"
+        }
+      },
+      "GrossWeight": "10",
+      "GrossWeightUnit": "KGM",
+      "GoodsCertifiedAs": "Human Consumption",
+      "ContainerNumber": "BICU1234567",
+      "SealNumber": "2345",
+      "PurposeOfTheExport": "Re-entry",
+      "DocumentType": "740",
+      "DocumentRef": "Test",
+      "ConsignorName": "Defra",
+      "ConsigneeCountry": "XI",
+      "ConsigneeName": "Defra",
+      "CertifierName": "ABC",
+      "CertificationRegion": "England",
+      "ResponsibleLoadConutry": "XI",
+      "ResponsibleForLoad": "Defra",
+      "CountryOfOrigin": "GB",
+      "RegionOfOrigins": "",
+      "PlaceOfDispatchCountry": "GB",
+      "PlaceOfDispatch": "Defra",
+      "PlaceOfLoadingCountry": "GB",
+      "PlaceOfLoading": "Defra",
+      "BorderControlPostCountry": "XI",
+      "BorderControlPost": "DAERA",
+      "TransportCondition": "Chilled",
+      "MeansOfTransport": "Railway",
+      "Identifier": "ABC1234",
+      "PlaceOfDestinationCountry": "XI",
+      "PlaceOfDestination": "Defra"
+    }
+  ]
+}
