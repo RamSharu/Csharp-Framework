@@ -1,0 +1,48 @@
+{
+  "Users": [
+    {
+      "username": "139273110608",
+      "password": "Exports123",
+      "logininfo": "exporter",
+      "Environment": "dev/tst",
+      "HomePage": true
+    },
+    {
+      "username": "782441021152",
+      "password": "Exports123",
+      "logininfo": "certifier",
+      "Environment": "dev/tst",
+      "HomePage": true
+    },
+    {
+      "username": "620464335257",
+      "password": "Exports123",
+      "logininfo": "exporter",
+      "Environment": "pre",
+      "HomePage": true
+    },
+    {
+      "username": "514124641931",
+      "password": "gateway2020",
+      "logininfo": "certifier",
+      "Environment": "pre",
+      "HomePage": false
+    },
+    {
+      "username": "481317578744",
+      "password": "Etrade123$",
+      "logininfo": "exporter",
+      "Environment": "prd",
+      "HomePage": true
+    },
+    {
+      "username": "893603473333",
+      "password": "Exports123$",
+      "logininfo": "certifier",
+      "Environment": "prd",
+      "HomePage": false
+    }
+
+  ]
+}
+  

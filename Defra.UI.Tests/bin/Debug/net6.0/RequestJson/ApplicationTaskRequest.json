@@ -1,0 +1,425 @@
+{
+  "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+  "displayApplicationId": "8A4C9039E124445",
+  "organisationId": "c24f493a-5315-ec11-b6e6-6045bd87ac26",
+  "userReference": "Automation_APPTask",
+  "commodityRoute": "CVEDA",
+  "created": "2023-01-18T10:49:52.3266667",
+  "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+  "submitted": "0001-01-01T00:00:00",
+  "submittedBy": "00000000-0000-0000-0000-000000000000",
+  "updated": "2023-01-18T10:56:32.6333333",
+  "updatedBy": "00000000-0000-0000-0000-000000000000",
+  "status": "Draft",
+  "certificateModelId": 0,
+  "userSettingsId": "00000000-0000-0000-0000-000000000000",
+  "commodityId": "2f31ed0d-1a57-4b7c-95b3-988607c81906",
+  "commodityStatus": "NotReviewed",
+  "exportDate": "0001-01-01T00:00:00",
+  "slaDate": "0001-01-01T00:00:00",
+  "arrivalAndDeparture": {
+    "id": "6e5053b4-181d-4002-b50e-a3976f6e097c",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "arrival": "2023-02-02T10:56:00",
+    "departure": "2023-01-31T10:56:00",
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "00000000-0000-0000-0000-000000000000"
+  },
+  "applicationCertificate": [
+    {
+      "id": "ed054640-72fe-42e4-826a-6ac6f58a23b4",
+      "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+      "certificateId": 11802,
+      "grossWeight": 10,
+      "grossWeightUnitCode": "KGM",
+      "grossVolume": 0,
+      "grossVolumeUnitCode": "",
+      "netWeightUnitCode": "",
+      "netVolumeUnitCode": "",
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "created": "2023-01-18T10:51:46.9769467",
+      "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "updated": "2023-01-18T10:51:46.9769471"
+    }
+  ],
+  "goodsCertifiedAs": {
+    "id": "b02905fc-4ef3-4d55-be13-4c47d5c6fe8c",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "certifiedAs": "CANNING_INDUSTRY",
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "00000000-0000-0000-0000-000000000000"
+  },
+  "consignor": {
+    "id": "402e6964-798f-4de1-980d-f6a91ec02864",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "name": "Defra eTrade Exporters LTD",
+    "internalId": "1028062",
+    "countryCode": "GB",
+    "street": "Spring Villa Road, Edgware",
+    "cityCountryId": "GB",
+    "cityName": "Hertsmere",
+    "cityInternalId": "",
+    "postCode": "HA8",
+    "regions": "Hertfordshire,East of England,England",
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+  },
+  "consignee": {
+    "id": "590c1907-d0a8-49ae-ae7a-b878871b1eb4",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "name": "ABC ACCOUNTANCY & MARKETING SERVICES LTD Hornbeam House  CW1 6GJ  ",
+    "practiceName": "ABC ACCOUNTANCY & MARKETING SERVICES LTD",
+    "stateCodeValue": "",
+    "certifierOrganisationId": "152691a1-6d8b-e911-a96f-000d3a29b5de",
+    "addressLine1": "Hornbeam House",
+    "addressLine2": "Electra Way",
+    "addressLine3": "1",
+    "postCode": "CW1 6GJ",
+    "allowInspection": true,
+    "assignedCertificates": "11802",
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+  },
+  "certifier": [
+    {
+      "id": "590c1907-d0a8-49ae-ae7a-b878871b1eb4",
+      "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+      "name": "ABC ACCOUNTANCY & MARKETING SERVICES LTD Hornbeam House  CW1 6GJ  ",
+      "practiceName": "ABC ACCOUNTANCY & MARKETING SERVICES LTD",
+      "stateCodeValue": "",
+      "certifierOrganisationId": "152691a1-6d8b-e911-a96f-000d3a29b5de",
+      "addressLine1": "Hornbeam House",
+      "addressLine2": "Electra Way",
+      "addressLine3": "1",
+      "postCode": "CW1 6GJ",
+      "allowInspection": true,
+      "assignedCertificates": "11802",
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+    }
+  ],
+  "placeOfOrigin": {
+    "id": "16f36c46-f70c-4c65-9d81-639d7cd32fb0",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "country": "GB",
+    "region": "GB-1",
+    "loadingIsOperator": false,
+    "placeOfDispatch": {
+      "id": "43b95ec9-a5af-478f-ba91-6c7bd3ec2a90",
+      "name": "Defra eTrade Exporters LTD",
+      "internalId": "1028062",
+      "countryCode": "GB",
+      "street": "Spring Villa Road, Edgware",
+      "cityCountryId": "GB",
+      "cityName": "Hertsmere",
+      "cityInternalId": "",
+      "postCode": "HA8",
+      "regions": "Hertfordshire,East of England,England",
+      "createdBy": "00000000-0000-0000-0000-000000000000",
+      "updatedBy": "00000000-0000-0000-0000-000000000000"
+    },
+    "placeOfLoading": {
+      "id": "54e03aa0-185f-45c0-bb5c-3dd6c18503e8",
+      "name": "Defra eTrade Exporters LTD",
+      "internalId": "1028062",
+      "countryCode": "GB",
+      "street": "Spring Villa Road, Edgware",
+      "cityCountryId": "GB",
+      "cityName": "Hertsmere",
+      "cityInternalId": "",
+      "postCode": "HA8",
+      "regions": "Hertfordshire,East of England,England",
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+    },
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+  },
+  "placeOfDestination": {
+    "id": "6b009da6-0d46-45e6-be8a-8b0625a52fa9",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "country": "XI",
+    "region": "",
+    "placeOfDesination": {
+      "id": "dc5c56ed-8717-4967-8058-3ae1f4340f09",
+      "name": "Defra eTrade Consignees LTD",
+      "internalId": "1043414",
+      "countryCode": "XI",
+      "street": "1 Killykergan Road",
+      "cityCountryId": "XI",
+      "cityName": "Coleraine",
+      "cityInternalId": "",
+      "postCode": "BT51",
+      "regions": "County Londonderry,Northern Ireland",
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+    },
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+  },
+  "borderControlPost": {
+    "id": "26dcf4c3-9ccc-4c34-9861-0000fb01b472",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "name": "Belfast Port - DAERA",
+    "code": "XIBEL1-DAERA",
+    "unloCode": "GBBEL",
+    "originCountryCode": "XI",
+    "categoriesOfAnimalsGoodsSpecs": "",
+    "inspectionCentreAddress": "Belfast City Council, 5 Corry Place, Belfast Harbour Estate, BT3 9HY",
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "00000000-0000-0000-0000-000000000000"
+  },
+  "purposeOfTheExport": {
+    "id": "c8652ae0-da1f-48ee-8ec4-9b02485bbb59",
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "purposeCode": "TRANSIT",
+    "desitnationCountryCode": "",
+    "exitBorder": "",
+    "exitAuthority": "",
+    "transitCountries": [],
+    "exitDate": "2023-01-18T10:53:55.0896716",
+    "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+    "updatedBy": "00000000-0000-0000-0000-000000000000"
+  },
+  "meansOfTransport": {
+    "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+    "created": "2023-04-18T09:31:03.349Z",
+    "createdBy": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "entries": [
+      {
+        "countryCode": "GB",
+        "created": "2023-01-18T11:03:34.9066667",
+        "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+        "flightNumber": "",
+        "id": "3a1edb42-d8c4-4b21-83a3-0ad4a82f3be9",
+        "imoNumber": "",
+        "internationalTransportDocument": "",
+        "railwayIdentifier": "",
+        "shipName": "",
+        "trailerNumber": "123",
+        "type": "Road",
+        "updatedBy": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "vehicleReg": "HV69Hpj",
+        "voyageNumber": ""
+      }
+    ],
+    "id": "3a1edb42-d8c4-4b21-83a3-0ad4a82f3be9",
+    "skip": false,
+    "transportCondition": "Chilled",
+    "updatedBy": "00000000-0000-0000-0000-000000000000"
+  },
+  "containerSealNumbers": [
+    {
+      "id": "03c4dcd0-5ff6-4569-95d3-c54128bfdf34",
+      "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+      "containerNumber": "BICU1236314",
+      "sealNumber": "123456",
+      "order": 1,
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "created": "2023-01-18T10:53:23.8633333",
+      "updatedBy": "00000000-0000-0000-0000-000000000000",
+      "updated": "2023-01-18T10:53:23.8633333"
+    }
+  ],
+  "commodity": [
+    {
+      "id": "2f31ed0d-1a57-4b7c-95b3-988607c81906",
+      "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+      "certificate": 11802,
+      "certificateName": "Live fish, crustaceans, certain fishery products (i.e. Cephalopods) and products from these animals intended for human consumption to the European Union and Northern Ireland",
+      "code": "030231",
+      "path": "R/N-10002/N-10082/N-10696",
+      "ehc": 8361,
+      "description": "Albacore or longfinned tunas (Thunnus alalunga)",
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "updatedBy": "00000000-0000-0000-0000-000000000000",
+      "updated": "2023-01-18T10:50:07.2466667",
+      "userSettingsId": "00000000-0000-0000-0000-000000000000",
+      "certificateStatus": "NotReviewed",
+      "certificateIssued": false,
+      "euCertificateStatus": "Issued",
+      "commodityQuantityTotals": {
+        "id": "5c460ca2-f6ad-4bf5-a462-fc04290f0aaf",
+        "commodityId": "2f31ed0d-1a57-4b7c-95b3-988607c81906",
+        "grossWeight": 0,
+        "grossWeightUnitCode": "",
+        "grossVolume": 0,
+        "grossVolumeUnitCode": "",
+        "netWeight": 0,
+        "netWeightUnitCode": "",
+        "netVolume": 0,
+        "netVolumeUnitCode": "",
+        "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+        "updatedBy": "00000000-0000-0000-0000-000000000000"
+      },
+      "commodityLines": [
+        {
+          "id": "baa3f493-095d-439a-a30d-e5e5f823872d",
+          "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+          "commodityId": "2f31ed0d-1a57-4b7c-95b3-988607c81906",
+          "createdBy": "00000000-0000-0000-0000-000000000000",
+          "updatedBy": "00000000-0000-0000-0000-000000000000",
+          "commodityFields": [
+            {
+              "id": "e6b80511-95e5-48ae-be0e-035e517e6394",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "COLLECTION_PRODUCTION_DATE",
+              "value": "2023-02-24 10:50:00",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "bbf9a0ee-35e9-4b54-aa24-30a51f14860c",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "PRODUCT_DESCRIPTION",
+              "value": "Prd 2",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "4328bc39-2780-41ce-aa07-63f317891e60",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "PACKAGE_COUNT",
+              "value": "1",
+              "languageCode": "",
+              "unitCode": "BG",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "caab7df4-0155-406d-84d4-6edbff080147",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "NATURE_OF_COMMODITY",
+              "value": "WILD_STOCK",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "a1197af2-426a-480d-bef1-854c820df932",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "TAXON_ID",
+              "value": "Thunnus alalunga",
+              "languageCode": "la",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "ac6364bd-9a3e-4cf7-9de4-8e8b76b5ac8c",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "COLD_STORE",
+              "value": "1028062",
+              "languageCode": "",
+              "unitCode": "",
+              "metaData": "[{\"key\":\"1028062\",\"value\":\"Slaughterhouse - PM - Food\"}]",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "46128b5c-1bc3-4050-b6db-90878f3445d5",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "TREATMENT_TYPE",
+              "value": "CHILLED",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "ed903349-3903-45b9-bbff-9db422a701c6",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "QUANTITY",
+              "value": "2",
+              "languageCode": "",
+              "unitCode": "H87",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "2eb603a1-f11c-453a-84bb-a1f359b7b211",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "BATCH_NUMBER",
+              "value": "123",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "19f0cd77-b3cb-48e2-90a7-b012ce16a813",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "FINAL_CONSUMER",
+              "value": "false",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "88ab4460-0bcb-4024-b8f4-ce74d4110636",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "NET_WEIGHT",
+              "value": "10",
+              "languageCode": "",
+              "unitCode": "KGM",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "c1035edc-95a4-4077-b394-e6719f4d2815",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "MANUFACTURING_PLANT",
+              "value": "1028062",
+              "languageCode": "",
+              "unitCode": "",
+              "metaData": "[{\"key\":\"1028062\",\"value\":\"Slaughterhouse - PM - Food\"}]",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            },
+            {
+              "id": "d5a7588c-3b8b-42ae-9c71-f4699de64eb8",
+              "commodityLineId": "baa3f493-095d-439a-a30d-e5e5f823872d",
+              "key": "IDENTIFICATION_MARK",
+              "value": "Test",
+              "languageCode": "",
+              "unitCode": "",
+              "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+              "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+            }
+          ]
+        }
+      ],
+      "hide": false,
+      "claimedUnderMas": false
+    }
+  ],
+  "accompanyingDocuments": [
+    {
+      "id": "ef10b2e3-39bd-408a-9637-78f39ded8f50",
+      "applicationId": "9f5edef2-3428-47af-b127-dc72e7e6593d",
+      "certificateId": "undefined",
+      "documentReference": "vvxcv",
+      "documentType": "740",
+      "dateOfIssue": "2023-01-27T00:00:00",
+      "path": "TestFailures20230113_1247.png",
+      "relationshipTypeCode": "BM",
+      "deletedByCertifier": false,
+      "sendToTraces": true,
+      "created": "2023-01-18T10:54:31.97",
+      "createdByName": "etrad euser",
+      "createdBy": "473e0135-72e4-4123-b779-3e0d1570059a",
+      "updated": "2023-01-18T10:54:31.97",
+      "updatedBy": "473e0135-72e4-4123-b779-3e0d1570059a"
+    }
+  ],
+  "catchCertificate": "",
+  "processed": "NotProcessed",
+  "qualifiesForMasReimbursement": false,
+  "ehcApplicationTaskList": []
+}

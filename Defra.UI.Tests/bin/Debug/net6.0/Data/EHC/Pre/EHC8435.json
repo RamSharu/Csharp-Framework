@@ -1,0 +1,46 @@
+﻿{
+  "EHC": [
+    {
+      "Identification": {
+        "PrdDesc": "Product 1",
+        "BreedCategory": "Cross breed",
+        "FillColdStore": false,
+        "PkgCount": "1",
+        "PkgUnit": "PK",
+        "FinalConsumerRadio": false,
+        "Quantity": "10",
+        "QuantityUnit": "H87",
+        "Species": "Meleagris gallopavo",
+        "FillManufacturingPlant": false
+      },
+      "GrossWeight": "10",
+      "GrossWeightUnit": "KGM",
+      "GoodsCertifiedAs": "Human Consumption",
+      "ContainerNumber": "BICU1234567",
+      "SealNumber": "2345",
+      "PurposeOfTheExport": "Re-entry",
+      "DocumentType": "740",
+      "DocumentRef": "Test",
+      "ConsignorName": "Defra",
+      "ConsigneeCountry": "XI",
+      "ConsigneeName": "Defra",
+      "CertifierName": "SNDCERT",
+      "CertificationRegion": "England",
+      "ResponsibleLoadConutry": "XI",
+      "ResponsibleForLoad": "Defra",
+      "CountryOfOrigin": "GB",
+      "RegionOfOrigins": "",
+      "PlaceOfDispatchCountry": "GB",
+      "PlaceOfDispatch": "Defra",
+      "PlaceOfLoadingCountry": "GB",
+      "PlaceOfLoading": "Defra",
+      "BorderControlPostCountry": "XI",
+      "BorderControlPost": "DAERA",
+      "TransportCondition": "Chilled",
+      "MeansOfTransport": "Railway",
+      "Identifier": "ABC1234",
+      "PlaceOfDestinationCountry": "XI",
+      "PlaceOfDestination": "Defra"
+    }
+  ]
+}

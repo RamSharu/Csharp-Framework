@@ -1,0 +1,24 @@
+parameters:
+  - name: env
+    type: string
+    
+
+variables:
+
+- name: Target
+  value: 'Chrome'
+- name: SeleniumGrid
+  value: 'https://hub.browserstack.com/wd/hub/'
+- name: DeviceName
+  value: 'Windows'
+- name: BSOSVersion
+  value: '11'
+- name: runTrigger
+  value: 'devpipeline'
+- name: Environment
+  value:  ${{ parameters.env }}
+- name: Build
+  value: Dev_Pipeline_Common_EEHC_Tests_$(Build.BuildNumber)
+- name: Where
+  value: 'TestCategory=EnvCheck'
+  

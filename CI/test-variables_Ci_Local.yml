@@ -1,0 +1,48 @@
+parameters:
+  - name: jobNameParam
+    type: string
+  - name: env
+    type: string
+  - name: SeleniumGrid
+    type: string  
+    
+
+variables:
+
+- name: Target
+  value: 'Chrome'
+- name: SeleniumGrid
+  value: ${{ parameters.SeleniumGrid }}
+- name: DeviceName
+  value: 'Windows'
+- name: BSOSVersion
+  value: '11'
+- name: runTrigger
+  value: 'devpipeline'
+- name: Environment
+  value:  ${{ parameters.env }}
+- name: Build
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_EnvironmentCheck') }}:
+    value: ADO_ENVCheck_Tests_$(Build.BuildNumber)
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Exporter') }}:
+    value: ADO_Exporter_Tests_$(Build.BuildNumber)
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Common') }}:
+    value: ADO_Common_Tests_$(Build.BuildNumber)
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Certifier') }}:
+    value: ADO_Certifier_Tests_$(Build.BuildNumber)
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Pre') }}:
+    value: ADO_PRE_PRD_Tests_$(Build.BuildNumber)
+- name: Where
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_EnvironmentCheck') }}:
+    value: 'TestCategory=EnvCheck'
+  ${{ if eq(parameters.jobNameParam, 'Regression') }}:
+    value: 'TestCategory=Regression'
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Pre') }}:
+    value: 'TestCategory=Pre'
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Exporter') }}:
+    value: 'TestCategory=Exporter'
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Certifier') }}:
+    value: 'TestCategory=Certifier'
+  ${{ if eq(parameters.jobNameParam, 'Ci_Local_Common') }}:
+    value: 'TestCategory=Common'
+  

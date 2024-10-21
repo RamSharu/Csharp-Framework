@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.33130.402
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Defra.UI.Tests", "Defra.UI.Tests\Defra.UI.Tests.csproj", "{2A4F32AC-E343-4DF9-BCAC-F7040C36F4E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B7C43F0-CA22-41F1-96E5-D01B44E10BB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Defra.UI.Test.Data", "Defra.UI.Test.Data\Defra.UI.Test.Data.csproj", "{B88C4BC7-D86E-47B3-AEC6-84E3CCA96FCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A4F32AC-E343-4DF9-BCAC-F7040C36F4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4F32AC-E343-4DF9-BCAC-F7040C36F4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4F32AC-E343-4DF9-BCAC-F7040C36F4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4F32AC-E343-4DF9-BCAC-F7040C36F4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88C4BC7-D86E-47B3-AEC6-84E3CCA96FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88C4BC7-D86E-47B3-AEC6-84E3CCA96FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88C4BC7-D86E-47B3-AEC6-84E3CCA96FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88C4BC7-D86E-47B3-AEC6-84E3CCA96FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F8AE70C-3E1C-445A-BEAF-C8266FE57569}
+	EndGlobalSection
+EndGlobal

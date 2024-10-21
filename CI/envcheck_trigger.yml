@@ -1,0 +1,56 @@
+trigger: none
+
+parameters:
+  - name: branchName
+    type: string
+    default: 'refs/heads/dev'
+  - name: Environment
+    type: string
+    default: 'https://dev-uk.trade.azure.defra.cloud'
+  - name: ApiEndpoint
+    type: string
+    default: 'https://devtrswebaw1030.azurewebsites.net/'
+  - name: SeleniumGrid
+    type: string
+    default: 'https://hub.browserstack.com/wd/hub/'
+  - name: DeviceName
+    type: string
+    default: 'Windows'
+  - name: BSOSVersion
+    type: string
+    default: '11'
+  
+schedules:
+- cron: "*/60 9-17 * * Mon,Tue,Wed,Thu,Fri"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - dev
+    exclude:    
+    - task/*
+    - master
+    
+
+resources:
+  repositories:
+    - repository: clientautomationreponew
+      type: git
+      name: DEFRA-EEHC/Defra.Trade.EEHC.Automation
+      ref: $(Build.SourceBranch)
+
+stages:
+  
+  - stage: EnvironmentCheck
+    displayName: EnvironmentCheck
+    jobs:
+    - template: run-test-template.yml
+      parameters:
+        jobName: EnvironmentCheck
+        envConfigParam: ${{ parameters.Environment}}
+        apiEndPoint: ${{ parameters.ApiEndpoint}}
+        branchName: ${{ parameters.branchName}}
+        SeleniumGrid: ${{parameters.SeleniumGrid}}  
+        DeviceName: ${{parameters.DeviceName}}
+        BSOSVersion: ${{parameters.BSOSVersion}}     
+        dependsOn: ''
+        

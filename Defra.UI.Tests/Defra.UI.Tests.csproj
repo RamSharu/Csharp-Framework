@@ -1,0 +1,373 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+	  <Compile Remove="Feature\Regression\Apha\**" />
+	  <EmbeddedResource Remove="Feature\Regression\Apha\**" />
+	  <None Remove="Feature\Regression\Apha\**" />
+	  <SpecFlowFeatureFiles Remove="Feature\Regression\Apha\**" />
+	  <SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Apha\**" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Certifier\Application\AddNewRecord - Copy.feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Certifier\Application\SearchApplication - Copy.feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (10).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (11).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (12).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (13).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (14).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (15).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (16).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (17).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (18).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (19).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (2).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (20).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (3).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (4).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (5).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (6).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (7).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (8).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Regression\Exporter\E2E\EHCE2E - Copy (9).feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Acceptance\Exporter\PageValidations\ApprovedEstablishmentsOperatorSearch - Copy.feature.cs" />
+		<SpecFlowObsoleteCodeBehindFiles Remove="Feature\Acceptance\Exporter\PageValidations\CopyCommodityRecord.feature.cs" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Defra.Ui.Automation.Framework" Version="2.0.4-b" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
+    <PackageReference Include="SpecFlow.NUnit.Runners" Version="3.9.74" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.ExternalData" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="*" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\Defra.UI.Test.Data\Defra.UI.Test.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<Compile Update="Feature\Regression\Certifier\Application\Modify\AddNewRecord.feature.cs">
+	  <Visible>true</Visible>
+	  <DependentUpon>%(Filename)</DependentUpon>
+	  <DesignTime>true</DesignTime>
+	  <AutoGen>true</AutoGen>
+	</Compile>
+	<Compile Update="Feature\Regression\Certifier\Application\Modify\EditAdditionalDocuments.feature.cs">
+	  <Visible>true</Visible>
+	  <DependentUpon>%(Filename)</DependentUpon>
+	  <DesignTime>true</DesignTime>
+	  <AutoGen>true</AutoGen>
+	</Compile>
+	<Compile Update="Feature\Regression\Certifier\Application\Modify\EditRecordAndChangeOperator.feature.cs">
+	  <Visible>true</Visible>
+	  <DependentUpon>%(Filename)</DependentUpon>
+	  <DesignTime>true</DesignTime>
+	  <AutoGen>true</AutoGen>
+	</Compile>
+	<Compile Update="Feature\Regression\Certifier\Application\Modify\EditRegionOfCertification.feature.cs">
+	  <Visible>true</Visible>
+	  <DependentUpon>%(Filename)</DependentUpon>
+	  <DesignTime>true</DesignTime>
+	  <AutoGen>true</AutoGen>
+	</Compile>
+	<Compile Update="Feature\Regression\Certifier\Application\ReturnToCertifierDashboard.feature.cs">
+	  <DependentUpon>ReturnToCertifierDashboard.feature</DependentUpon>
+	</Compile>
+    <Compile Update="Feature\Regression\Common\Account.feature.cs">
+      <DependentUpon>Account.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Feature\Regression\Exporter\Application\Create\ComplelePlaceOfDestination.feature.cs">
+      <DependentUpon>ComplelePlaceOfDestination.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Feature\Regression\Exporter\Application\Create\CompleteMeansofTransport.feature.cs">
+      <DependentUpon>CompleteMeansofTransport.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Feature\Regression\Exporter\Application\Create\CompleteBorderControlPost.feature.cs">
+      <DependentUpon>CompleteBorderControlPost.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Feature\Regression\Exporter\Application\Create\ContainerorSealNumber.feature.cs">
+      <DependentUpon>ContainerOrSealNumber.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Feature\Acceptance\Exporter\PageValidations\ManageCommoditiesOperatorSearch.feature.cs">
+      <DependentUpon>ManageCommoditiesOperatorSearch.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="CI_appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="docker-compose-grid.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Data\AccompanyingDocsFile\AccompanyingDocsFileToUpload.txt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8324.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8350.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8325.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8328.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8305.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8385.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8383.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8368.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8333.json">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8369.json">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8391.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8390.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8371.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8467.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8461.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8370.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8364.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8369.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\EHC8435.json">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8305.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8324.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8325.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8328.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8333.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8350.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8361.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8364.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8368.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8369.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8370.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8371.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8383.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8385.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8390.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8391.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8435.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8461.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="Data\EHC\Pre\EHC8467.json">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+    <None Update="Data\EHC\EHC8361.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Identification\IdentificationData_EHC8361.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Users\Users.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Feature\Acceptance\Exporter\Create\commodities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testrun_30.runsettings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testrun_3.runsettings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="testrun_10.runsettings">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="testrun.runsettings">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Feature\Account.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Certifier\Application\Modify\EditRecordAndChangeOperator.feature">
+		<Visible>$(UsingMicrosoftNETSdk)</Visible>
+		<CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Certifier\Application\ReturnToCertifierDashboard.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8361.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8305.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8368.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8369.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8324.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8350.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8325.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8461.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8333.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8328.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8370.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8364.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8371.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8390.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8391.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8383.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8385.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8467.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+	<SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E_EHC8435.feature">
+	  <Visible>$(UsingMicrosoftNETSdk)</Visible>
+	  <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+	</SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Feature\Regression\Exporter\E2E\EHCE2E.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Feature\Acceptance\Exporter\PageValidations\ManageCommoditiesOperatorSearch.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Feature\Acceptance\Apha\" />
+    <Folder Include="Feature\Acceptance\Certifier\Certifier-Application\Consignment\" />
+    <Folder Include="Feature\Acceptance\Certifier\Certifier-Application\ehc\questions\descriptionOfTheGoods\" />
+    <Folder Include="Feature\Regression\Apha\" />
+  </ItemGroup>
+	
+
+
+</Project>

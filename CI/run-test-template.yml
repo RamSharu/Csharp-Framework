@@ -1,0 +1,177 @@
+parameters:
+  - name: jobName
+    type: string
+  - name: envConfigParam
+    type: string
+  - name: apiEndPoint
+    type: string
+  - name: branchName
+    type: string
+  - name: SeleniumGrid
+    type: string
+  - name: DeviceName
+    type: string
+  - name: BSOSVersion
+    type: string
+  - name: dependsOn
+    type: string
+  - name: Workers
+    type: string
+
+jobs: 
+
+- job: ${{ parameters.jobName }}
+  displayName: ${{ parameters.jobName }}
+  timeoutInMinutes: 300
+
+  pool:
+    ${{ if contains(parameters.SeleniumGrid, 'localhost') }}:
+      name: 'DEFRA-COMMON-ubuntu2004-SSV3'
+    ${{ if contains(parameters.SeleniumGrid, 'browserstack') }}:
+      name: 'DEFRA-TRD'
+
+  variables:
+    - ${{ if contains(parameters.jobName, 'AC_Automation') }}:
+      - template: test-variables_Ac_Automation.yml
+        parameters:
+          env: ${{parameters.envConfigParam}}
+          jobNameParam: ${{parameters.jobName}}
+          SeleniumGrid: ${{parameters.SeleniumGrid}}
+    - ${{ if contains(parameters.jobName, 'Ci_Local') }}:
+      - template: test-variables_Ci_Local.yml
+        parameters:
+          env: ${{parameters.envConfigParam}}
+          jobNameParam: ${{parameters.jobName}}
+          SeleniumGrid: ${{parameters.SeleniumGrid}}
+    - ${{ if contains(parameters.jobName, 'Ci.Integration') }}:
+      - template: test-variables_CI.yml
+        parameters:
+          env: ${{parameters.envConfigParam}}
+          jobNameParam: ${{parameters.jobName}}
+
+  steps:
+    
+    - task: DownloadBuildArtifacts@0
+      displayName: TestArtifact
+      inputs:
+        buildType: 'specific'
+        project: '57fadf93-268d-4f80-bc2e-5b7346c6942c'
+        pipeline: '2696'
+        buildVersionToDownload: 'latestFromBranch'
+        branchName: ${{ parameters.branchName }}
+        downloadType: 'single'
+        artifactName: 'drop'
+        downloadPath: '$(System.ArtifactsDirectory)'
+
+    - task: CopyFiles@2
+      displayName: 'Copy Test Artifacts'
+      inputs:
+        SourceFolder: '$(System.ArtifactsDirectory)/drop'
+        TargetFolder: $(System.DefaultWorkingDirectory)
+        OverWrite: true
+        CleanTargetFolder: true
+    
+    - task: ExtractFiles@1
+      inputs:
+        archiveFilePatterns: '**/Defra.UI.Tests.zip'
+        destinationFolder: '$(System.DefaultWorkingDirectory)/Defra.UI.Tests'
+        cleanDestinationFolder: false
+        overwriteExistingFiles: true
+    
+    - task: replacetokens@3
+      displayName: Replace Tokens
+      inputs:
+        rootDirectory: '$(System.DefaultWorkingDirectory)/Defra.UI.Tests'
+        targetFiles: 'appsettings.json'
+        encoding: auto
+        writeBOM: true
+        escapeType: json
+        actionOnMissing: warn
+        keepToken: false
+        tokenPrefix: '#{{'
+        tokenSuffix: '}}'
+        useLegacyPattern: false
+        enableTelemetry: false
+
+    - powershell: |
+        $jsonString = Get-Content "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/appsettings.json" | Out-String
+        Write-Host $jsonString
+      displayName: 'Display appsettings.json'
+
+    - ${{ if contains(parameters.SeleniumGrid, 'localhost:') }}:
+      - powershell:
+          docker system prune -a --volumes --force
+        displayName: 'Stop and Clean all containers'
+
+    - ${{ if contains(parameters.SeleniumGrid, 'localhost:') }}:
+      - task: DockerCompose@0
+        displayName: Run a Docker Compose command
+        inputs:
+          action: Run a Docker Compose command
+          workingDirectory: $(System.DefaultWorkingDirectory)/Defra.UI.Tests
+          dockerComposeFile: $(System.DefaultWorkingDirectory)/Defra.UI.Tests/docker-compose-grid.yml 
+          projectName: Defra.UI.Tests
+          qualifyImageNames: true
+          dockerComposeCommand: up -d
+          #arguments: '--exit-code-from selenium-hub'
+
+    - powershell: |
+        if(${{ parameters.Workers }} -eq "10"){
+          Set-Location -Path "$(System.DefaultWorkingDirectory)/Defra.UI.Tests"
+          dotnet test "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/Defra.UI.Tests.dll" --settings "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/testrun_10.runsettings" --filter "$(Where)" --logger:"trx;logfilename=${{ parameters.jobName }}.xml"
+        }
+        if(${{ parameters.Workers }} -eq "30"){
+          Set-Location -Path "$(System.DefaultWorkingDirectory)/Defra.UI.Tests"
+          dotnet test "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/Defra.UI.Tests.dll" --settings "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/testrun_30.runsettings" --filter "$(Where)" --logger:"trx;logfilename=${{ parameters.jobName }}.xml"
+        }
+        if(${{ parameters.Workers }} -eq "3"){
+          Set-Location -Path "$(System.DefaultWorkingDirectory)/Defra.UI.Tests"
+          dotnet test "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/Defra.UI.Tests.dll" --settings "$(System.DefaultWorkingDirectory)/Defra.UI.Tests/testrun_3.runsettings" --filter "$(Where)" --logger:"trx;logfilename=${{ parameters.jobName }}.xml"
+        }
+        
+      displayName: 'Execute Tests'
+      failOnStderr: true
+      ignoreLASTEXITCODE: true
+      continueOnError: true
+    
+    - ${{ if contains(parameters.SeleniumGrid, 'localhost:') }}:
+      - task: DockerCompose@0
+        displayName: Run a Docker Compose command
+        inputs:
+          action: Run a Docker Compose command
+          workingDirectory: $(System.DefaultWorkingDirectory)/Defra.UI.Tests
+          dockerComposeFile: $(System.DefaultWorkingDirectory)/Defra.UI.Tests/docker-compose-grid.yml 
+          projectName: Defra.UI.Tests
+          qualifyImageNames: true
+          dockerComposeCommand: down
+    
+    - ${{ if or( eq(parameters.branchName, 'refs/heads/master'), contains(parameters.branchName, 'release'), eq(parameters.branchName, 'refs/heads/dev') ) }}:
+      - task: SpecFlowPlus@0
+        displayName: 'LivingDoc with FeatureFolder generatorSource'
+        inputs:
+          generatorSource: 'TestAssembly'
+          testAssemblyFilePath: '$(System.DefaultWorkingDirectory)/Defra.UI.Tests/Defra.UI.Tests.dll'
+          testExecutionJson: '$(System.DefaultWorkingDirectory)/Defra.UI.Tests/TestExecution.json'
+          projectName: 'Defra.EEHC.UI.Automation'
+          projectLanguage: 'en'
+          workItemPrefix: 'WI'
+        enabled: true
+        continueOnError: true
+        condition: always()
+        timeoutInMinutes: 10
+    
+    - task: PublishPipelineArtifact@0
+      displayName: 'Publish Screenshots'
+      inputs:
+          testResultsFiles: 'TestFailures*.png'
+          artifactName: ${{ parameters.jobName }}
+          targetPath: '$(System.DefaultWorkingDirectory)/Defra.UI.Tests/TestResults/'
+
+    - task: PublishTestResults@2
+      displayName: 'Publish Test Results'
+      inputs:
+        testResultsFormat: VSTest
+        testResultsFiles: ${{ parameters.jobName }}.xml
+        searchFolder: '$(System.DefaultWorkingDirectory)/Defra.UI.Tests/TestResults/'
+        testRunTitle: ${{ parameters.jobName }}
+        failTaskOnFailedTests: true
